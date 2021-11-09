@@ -24,15 +24,15 @@ module "consul_network" {
   KEY = aws_key_pair.ssh_key.key_name
 }
 
-// module "vault_cluster" {
-//   source = "./modules/vault-cluster"
+module "vault_cluster" {
+  source = "./modules/vault-cluster"
 
-//   SUBNET     = module.consul_network.subnet.id
-//   VPC_SG_IDS = [module.consul_network.sg.id]
-//   REGION     = var.REGION
+  SUBNET     = module.consul_network.subnet.id
+  VPC_SG_IDS = [module.consul_network.sg.id]
+  REGION     = var.REGION
 
-//   VAULT_LICENSE = var.VAULT_LICENSE
-//   CONSUL_HTTP_TOKEN = var.CONSUL_HTTP_TOKEN
+  VAULT_LICENSE = var.VAULT_LICENSE
+  CONSUL_HTTP_TOKEN = var.CONSUL_HTTP_TOKEN
 
-//   KEY = aws_key_pair.ssh_key.key_name
-// }
+  KEY = aws_key_pair.ssh_key.key_name
+}
