@@ -14,7 +14,7 @@ terraform {
 }
 
 resource "aws_key_pair" "ssh_key" {
-  key_name   = "test-key"
+  key_name   = "cmelgreen-default-ssh-key"
   public_key = var.PUBLIC_KEY
 }
 
