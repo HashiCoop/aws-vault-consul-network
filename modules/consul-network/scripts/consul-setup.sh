@@ -12,7 +12,7 @@ ui_config = {
 }
 acl = {
     enabled = true
-    default_policy = "deny"
+    default_policy = "allow"
     enable_token_persistence = true
 }
 leave_on_terminate = true

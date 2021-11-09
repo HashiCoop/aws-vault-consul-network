@@ -44,16 +44,6 @@ module "network" {
   NAME = "cmelgreen-test-"
 
   INGRESS_RULES = [
-    {port="22"},
-    {port="80"},
-    {port="433"},
-    {port="5432"},
-    {port="8200"},
-    {port="8300", to_port="8302"},
-    {port="8301", to_port="8302", protocl="udp"},
-    {port="21000", to_port="21255"},
-    {port="8500"},
-    {port="8600"},
-    {port="8600", protocol="udp"}
+    {port="0", to_port="65000", cidr=[var.CIDR_WHITELIST]}
   ]
 }

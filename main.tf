@@ -22,6 +22,7 @@ module "consul_network" {
   source = "./modules/consul-network"
 
   KEY = aws_key_pair.ssh_key.key_name
+  CIDR_WHITELIST = var.CIDR_WHITELIST
 }
 
 module "vault_cluster" {

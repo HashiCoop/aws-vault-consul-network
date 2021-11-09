@@ -20,3 +20,6 @@ variable "PUBLIC_KEY" {
 }
 
 variable "CONSUL_HTTP_TOKEN" {}
+
+variable "CIDR_WHITELIST" {
+}
