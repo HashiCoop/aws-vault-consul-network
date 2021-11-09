@@ -17,3 +17,7 @@ output "backup_subnet_id" {
 output "security_group" {
   value = module.consul_network.sg.id
 }
+
+output "vpc_id" {
+  value = module.consul_network.vpc.id
+}
